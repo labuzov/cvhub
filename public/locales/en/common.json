@@ -1,3 +1,10 @@
 {
-  "hello": "hello world"
+  "hello": "hello world",
+
+  "editor.tabs.basic": "Basic Info",
+  "editor.tabs.summary": "Profile Summary",
+  "editor.tabs.skills": "Skills",
+  "editor.tabs.experience": "Work Experience",
+  "editor.tabs.education": "Education",
+  "editor.tabs.certifications": "Certifications"
 }

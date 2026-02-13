@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import styles from './Spinner.module.css';
+import styles from './Spinner.module.scss';
 
 
 type Props = HTMLAttributes<HTMLDivElement> & {

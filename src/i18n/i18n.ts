@@ -2,21 +2,19 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import HttpBackend from 'i18next-http-backend';
 
-import { LANGS } from './types';
-
-const HttpApi = new HttpBackend(null, {
-  loadPath: '/locales/{{lng}}/{{ns}}.json'
-});
-
-const lng = LANGS.EN;
-const fallbackLng = LANGS.EN;
+import { LANG_NS, LANGS } from './types';
 
 i18n
+  .use(HttpBackend)
   .use(initReactI18next)
-  .use(HttpApi)
   .init({
-    lng,
-    fallbackLng,
+    lng: LANGS.EN,
+    fallbackLng: LANGS.EN,
+    ns: [LANG_NS.Common],
+    defaultNS: LANG_NS.Common,
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json'
+    },
     interpolation: {
       escapeValue: false,
     },
