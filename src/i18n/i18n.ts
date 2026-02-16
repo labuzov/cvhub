@@ -13,7 +13,7 @@ i18n
     ns: [LANG_NS.Common],
     defaultNS: LANG_NS.Common,
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json'
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`
     },
     interpolation: {
       escapeValue: false,
