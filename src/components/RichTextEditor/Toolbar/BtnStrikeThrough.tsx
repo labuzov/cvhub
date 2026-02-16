@@ -1,4 +1,3 @@
-import React from 'react';
 import { createButton } from 'react-simple-wysiwyg';
 
 const Icon = (
