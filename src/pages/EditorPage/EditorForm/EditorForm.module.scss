@@ -1,0 +1,16 @@
+.section {
+  height: 100%;
+  overflow: auto;
+}
+
+.wrapper {
+  padding: var(--spacing-8);
+}
+
+.title {
+  margin-bottom: var(--spacing-2);
+}
+
+.description {
+  margin-bottom: var(--spacing-8);
+}

@@ -6,5 +6,10 @@
   "editor.tabs.skills": "Skills",
   "editor.tabs.experience": "Work Experience",
   "editor.tabs.education": "Education",
-  "editor.tabs.certifications": "Certifications"
+  "editor.tabs.certifications": "Certifications",
+
+  "editor.form.basic.title": "Basic Info",
+  "editor.form.basic.description": "Add your personal info",
+
+  "editor.field.name": "Name"
 }

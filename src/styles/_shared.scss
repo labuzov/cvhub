@@ -1,0 +1,34 @@
+$xs-width: '425px';
+$sm-width: '600px';
+$md-width: '768px';
+$lg-width: '1024px';
+
+@mixin bp-xs() {
+  @media screen and (max-width: $xs-width) {
+    @content();
+  }
+}
+
+@mixin bp-sm() {
+  @media screen and (max-width: $sm-width) {
+    @content();
+  }
+}
+
+@mixin bp-md() {
+  @media screen and (max-width: $md-width) {
+    @content();
+  }
+}
+
+@mixin bp-lg() {
+  @media screen and (max-width: $lg-width) {
+    @content();
+  }
+}
+
+%text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

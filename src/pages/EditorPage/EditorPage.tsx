@@ -1,6 +1,6 @@
-import TabsPanel from './TabsPanel/TabsPanel';
-
 import { useEditorTabs } from './hooks/useEditorTabs';
+import TabsPanel from './TabsPanel/TabsPanel';
+import { EditorForm } from './EditorForm/EditorForm';
 import styles from './EditorPage.module.scss';
 
 const EditorPage = () => {
@@ -11,6 +11,9 @@ const EditorPage = () => {
       <TabsPanel
         selectedTab={selectedTab}
         onTabChange={setSelectedTab}
+      />
+      <EditorForm
+        selectedTab={selectedTab}
       />
     </div>
   )

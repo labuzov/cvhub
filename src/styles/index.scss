@@ -1,5 +1,7 @@
 @use "./base";
+@use "./shared";
 @use "./vars";
 
 // components
 @use "./components/tabs";
+@use "./components/input";
