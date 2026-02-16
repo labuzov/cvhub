@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { useEditorStore, type CVInfo } from '@/stores/EditorStore';
+import { useCVStore, type CVInfo } from '@/stores/CVStore';
 
 import { Paper } from '@/components/Paper';
 import { FormField } from '@/components/FormField';
@@ -15,10 +15,10 @@ type Props = {
 }
 
 export const Basic = ({}: Props) => {
-  const { cv, updateCVField } = useEditorStore();
+  const { cv, updateCVField } = useCVStore();
   const { t } = useTranslation();
 
-  const textFields: (keyof CVInfo)[] = ['name', 'designation', 'email', 'url', 'location', 'phone'];
+  const textFields: (keyof CVInfo)[] = ['name', 'designation', 'email', 'phone', 'url', 'location'];
 
   return (
     <section

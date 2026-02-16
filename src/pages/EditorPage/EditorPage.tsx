@@ -2,6 +2,7 @@ import { useEditorTabs } from './hooks/useEditorTabs';
 import TabsPanel from './TabsPanel/TabsPanel';
 import { EditorForm } from './EditorForm/EditorForm';
 import styles from './EditorPage.module.scss';
+import { CVPreview } from './CVPreview/CVPreview';
 
 const EditorPage = () => {
   const { selectedTab, setSelectedTab } = useEditorTabs();
@@ -15,6 +16,7 @@ const EditorPage = () => {
       <EditorForm
         selectedTab={selectedTab}
       />
+      <CVPreview />
     </div>
   )
 }

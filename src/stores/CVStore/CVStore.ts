@@ -16,21 +16,22 @@ export type CVInfo = {
   }[];
 
   experience: {
+    id: string;
     designation: string;
-    organisation: string;
+    organization: string;
     startDate: string;
-    endDate: string;
+    endDate?: string;
     isCurrent: boolean;
     description: string;
   }[];
 }
 
-type EditorState = {
+type CVState = {
   cv: CVInfo;
   updateCVField: (field: keyof CVInfo, value?: unknown) => void;
 }
 
-export const useEditorStore = create<EditorState>(set => ({
+export const useCVStore = create<CVState>(set => ({
   cv: {
     name: '',
     designation: '',
@@ -39,8 +40,20 @@ export const useEditorStore = create<EditorState>(set => ({
     location: '',
     phone: '',
     summary: '',
-    skills: [],
-    experience: [],
+    skills: [
+      { title: 'React' },
+      { title: 'TypeScript', proficiency: 90 }
+    ],
+    experience: [
+      {
+        id: '1',
+        designation: 'Senior Frontend Developer',
+        organization: 'Super Solutions',
+        description: 'some description',
+        startDate: '01.11.2021',
+        isCurrent: true
+      }
+    ],
   },
 
   updateCVField: (field: keyof CVInfo, value?: unknown) => {

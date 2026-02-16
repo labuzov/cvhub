@@ -50,7 +50,7 @@
   z-index: 1;
   color: var(--tabs-text);
   transition: 200ms;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   forced-color-adjust: none;
   -webkit-tap-highlight-color: transparent;
 
@@ -79,7 +79,7 @@
   position: absolute;
   transition-duration: 200ms;
   border-radius: 3px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   z-index: -1;
 
   @media (prefers-reduced-motion: reduce) {
