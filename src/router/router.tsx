@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 
 import AppLayout from '@/components/AppLayout/AppLayout';
 
@@ -8,7 +8,7 @@ import RouterWrapper from './RouterWrapper';
 
 const EditorPage = lazy(() => import('@/pages/EditorPage/EditorPage'));
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: <RouterWrapper />,
