@@ -15,3 +15,10 @@
 .description {
   margin-bottom: var(--spacing-8);
 }
+
+.actions {
+  margin-top: var(--spacing-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

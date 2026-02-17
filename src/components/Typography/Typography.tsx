@@ -11,15 +11,15 @@ type Props = HTMLAttributes<HTMLDivElement> & {
 }
 
 export const Typography = ({
-  className, variant = 'body1', weight='normal', color = 'primary', children, ...props
+  className, variant = 'body1', weight, color = 'primary', children, ...props
 }: Props) => {
 
   return (
     <div
       className={classNames(
         styles.typography,
+        weight && styles[weight],
         styles[variant],
-        styles[weight],
         styles[color],
         className
       )}

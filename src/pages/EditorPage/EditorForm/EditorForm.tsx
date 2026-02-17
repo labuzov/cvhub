@@ -2,10 +2,13 @@ import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Typography } from '@/components/Typography';
+import { Button } from '@/components/Button';
+
+import styles from './EditorForm.module.scss';
 import { EditorTabs } from '../types';
 import { Basic } from './Basic/Basic';
 import { Summary } from './Summary/Summary';
-import styles from './EditorForm.module.scss';
+import { Skills } from './Skills/Skills';
 
 
 type Props = {
@@ -16,13 +19,16 @@ type Props = {
   onNextTabClick?: () => void;
 }
 
-export const EditorForm = ({ selectedTab }: Props) => {
+export const EditorForm = ({
+  selectedTab, isPrevTabDisabled, isNextTabDisabled, onPrevTabClick, onNextTabClick
+}: Props) => {
   const { t } = useTranslation();
 
   const renderForm = useCallback(() => {
     switch (selectedTab) {
       case EditorTabs.Basic: return <Basic />;
       case EditorTabs.Summary: return <Summary />;
+      case EditorTabs.Skills: return <Skills />;
       default: return null;
     }
   }, [selectedTab]);
@@ -50,7 +56,19 @@ export const EditorForm = ({ selectedTab }: Props) => {
         </div>
 
         <div className={styles.actions}>
-
+          <Button
+            variant="secondary"
+            isDisabled={isPrevTabDisabled}
+            onClick={onPrevTabClick}
+          >
+            {t('button.prevStep')}
+          </Button>
+          <Button
+            isDisabled={isNextTabDisabled}
+            onClick={onNextTabClick}
+          >
+            {t('button.nextStep')}
+          </Button>
         </div>
       </div>
     </section>
