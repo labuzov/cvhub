@@ -1,37 +1,15 @@
 import { create } from 'zustand';
 
+import type { CVInfo, CVPreferences } from './types';
 
-export type CVInfo = {
-  name: string;
-  designation: string;
-  email: string;
-  url: string;
-  location: string;
-  phone: string;
-  summary: string;
 
-  skills: {
-    title: string;
-    proficiency?: number;
-  }[];
-
-  experience: {
-    id: string;
-    designation: string;
-    organization: string;
-    startDate: string;
-    endDate?: string;
-    isCurrent: boolean;
-    description: string;
-  }[];
-}
-
-type CVState = {
+type State = {
   cv: CVInfo;
+  preferences: CVPreferences;
   updateCVField: (field: keyof CVInfo, value?: unknown) => void;
 }
 
-export const useCVStore = create<CVState>(set => ({
+export const useCVStore = create<State>(set => ({
   cv: {
     name: '',
     designation: '',
@@ -40,10 +18,7 @@ export const useCVStore = create<CVState>(set => ({
     location: '',
     phone: '',
     summary: '',
-    skills: [
-      { title: 'React' },
-      { title: 'TypeScript', proficiency: 90 }
-    ],
+    skills: [],
     experience: [
       {
         id: '1',
@@ -54,6 +29,15 @@ export const useCVStore = create<CVState>(set => ({
         isCurrent: true
       }
     ],
+  },
+
+  preferences: {
+    fontSize: 14,
+    spacing: 4,
+    colorPrimary: '#3390ec',
+    colorPrimaryLight: '#e6f2fc',
+    colorText: '#333333',
+    colorTextSecondary: '#9e9e9e',
   },
 
   updateCVField: (field: keyof CVInfo, value?: unknown) => {

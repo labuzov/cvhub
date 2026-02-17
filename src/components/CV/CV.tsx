@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import type { CVInfo } from '@/stores/CVStore';
+import type { CVInfo, CVPreferences } from '@/stores/CVStore';
 
 import styles from './CV.module.scss';
 import { Default } from './variants/Default/Default';
@@ -9,11 +9,10 @@ import { Default } from './variants/Default/Default';
 type Props = {
   cv: CVInfo;
   variant: 'default';
-  spacing?: number;
-  fontSize?: number;
+  preferences: CVPreferences;
 };
 
-export const CV = ({ cv, variant, spacing = 4, fontSize = 14 }: Props) => {
+export const CV = ({ cv, variant, preferences }: Props) => {
 
   const renderVariant = useCallback(() => {
     switch (variant) {
@@ -22,16 +21,20 @@ export const CV = ({ cv, variant, spacing = 4, fontSize = 14 }: Props) => {
     }
   }, [cv, variant]);
 
+  const {
+    fontSize, spacing, colorPrimary, colorPrimaryLight, colorText, colorTextSecondary
+  } = preferences;
+
   return (
     <div
       className={styles.cv}
       style={{
         '--cv-font-size': `${fontSize}px`,
         '--cv-spacing': `${spacing}px`,
-        '--cv-primary': `var(--primary)`,
-        '--cv-primary-light': `var(--primary-50)`,
-        '--cv-text': `var(--text)`,
-        '--cv-text-secondary': `var(--text-secondary)`,
+        '--cv-primary': colorPrimary,
+        '--cv-primary-light': colorPrimaryLight,
+        '--cv-text': colorText,
+        '--cv-text-secondary': colorTextSecondary,
       } as React.CSSProperties}
     >
       {renderVariant()}

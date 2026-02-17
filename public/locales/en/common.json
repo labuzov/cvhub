@@ -33,8 +33,15 @@
   "cv.experience": "Experience",
   "cv.education": "Education",
   "cv.certifications": "Certifications",
+  "cv.tips": "To download as a PDF:",
+  "cv.tips.tip1": "1. Click 'Print and Save'",
+  "cv.tips.tip2": "2. Set these fields: Destination -> 'Save as PDF', Layout -> 'Portrait'",
+  "cv.tips.tip3": "3. Uncheck 'Headers and footers'",
 
   "button.prevStep": "Previous Step",
   "button.nextStep": "Next Step",
-  "button.add": "Add"
+  "button.add": "Add",
+  "button.preferences": "Preferences",
+  "button.goToExport": "Go To Export",
+  "button.print": "Print and Save"
 }
