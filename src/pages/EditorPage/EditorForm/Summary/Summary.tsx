@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { useEditorStore } from '@/stores/EditorStore';
+import { useCVStore } from '@/stores/CVStore';
 
 import { Paper } from '@/components/Paper';
 import { FormField } from '@/components/FormField';
@@ -15,7 +15,7 @@ type Props = {
 }
 
 export const Summary = ({}: Props) => {
-  const { cv, updateCVField } = useEditorStore();
+  const { cv, updateCVField } = useCVStore();
   const { t } = useTranslation();
 
   return (

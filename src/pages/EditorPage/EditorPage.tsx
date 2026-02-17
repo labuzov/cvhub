@@ -1,10 +1,19 @@
 import { useEditorTabs } from './hooks/useEditorTabs';
 import TabsPanel from './TabsPanel/TabsPanel';
 import { EditorForm } from './EditorForm/EditorForm';
+import { CVPreview } from './CVPreview/CVPreview';
 import styles from './EditorPage.module.scss';
 
+
 const EditorPage = () => {
-  const { selectedTab, setSelectedTab } = useEditorTabs();
+  const {
+    selectedTab,
+    isPrevTabDisabled,
+    isNextTabDisabled,
+    setSelectedTab,
+    setPrevTab,
+    setNextTab,
+  } = useEditorTabs();
 
   return (
     <div className={styles.page}>
@@ -14,7 +23,12 @@ const EditorPage = () => {
       />
       <EditorForm
         selectedTab={selectedTab}
+        isPrevTabDisabled={isPrevTabDisabled}
+        isNextTabDisabled={isNextTabDisabled}
+        onPrevTabClick={setPrevTab}
+        onNextTabClick={setNextTab}
       />
+      <CVPreview />
     </div>
   )
 }

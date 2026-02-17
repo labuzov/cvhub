@@ -1,0 +1,16 @@
+.header {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--bg-2);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-4);
+  height: 59px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

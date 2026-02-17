@@ -1,6 +1,4 @@
 {
-  "hello": "hello world",
-
   "editor.tabs.basic": "Basic Info",
   "editor.tabs.summary": "Profile Summary",
   "editor.tabs.skills": "Skills",
@@ -9,7 +7,41 @@
   "editor.tabs.certifications": "Certifications",
 
   "editor.form.basic.title": "Basic Info",
-  "editor.form.basic.description": "Add your personal info",
+  "editor.form.basic.description": "Your main personal details",
+  "editor.form.summary.title": "Summary",
+  "editor.form.summary.description": "A short introduction about yourself",
+  "editor.form.skills.title": "Skills",
+  "editor.form.skills.description": "A list of your skills that highlight your professional capabilities",
+  "editor.form.experience.title": "Work Experience",
+  "editor.form.experience.description": "Your employment history, including roles, responsibilities, and achievements",
+  "editor.form.education.title": "Education",
+  "editor.form.education.description": "Information about your academic background, degrees, and relevant coursework or training",
+  "editor.form.certifications.title": "Certifications",
+  "editor.form.certifications.description": "Professional certificates, licenses, and additional credentials that support your expertise",
 
-  "editor.field.name": "Name"
+  "editor.field.name": "Name",
+  "editor.field.designation": "Designation",
+  "editor.field.email": "Email",
+  "editor.field.phone": "Phone",
+  "editor.field.url": "Website Link",
+  "editor.field.location": "Location",
+  "editor.field.summary": "Summary",
+  "editor.field.skills": "Skill",
+
+  "cv.summary": "Summary",
+  "cv.skills": "Skills",
+  "cv.experience": "Experience",
+  "cv.education": "Education",
+  "cv.certifications": "Certifications",
+  "cv.tips": "To download as a PDF:",
+  "cv.tips.tip1": "1. Click 'Print and Save'",
+  "cv.tips.tip2": "2. Set these fields: Destination -> 'Save as PDF', Layout -> 'Portrait'",
+  "cv.tips.tip3": "3. Uncheck 'Headers and footers'",
+
+  "button.prevStep": "Previous Step",
+  "button.nextStep": "Next Step",
+  "button.add": "Add",
+  "button.preferences": "Preferences",
+  "button.goToExport": "Go To Export",
+  "button.print": "Print and Save"
 }

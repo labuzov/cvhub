@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.field {
+  width: calc(50% - var(--spacing-2));
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-4);
+}
+
+.addBtn {
+  min-width: 120px;
+}
+
+.tags {
+  margin-top: var(--spacing-8);
+}

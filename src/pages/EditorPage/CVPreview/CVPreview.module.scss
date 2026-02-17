@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100%;
+  max-width: 650px;
+  padding: var(--spacing-8);
+  overflow: auto;
+}
+
+.actions {
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: var(--spacing-2);
+}
+
+.cv {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
