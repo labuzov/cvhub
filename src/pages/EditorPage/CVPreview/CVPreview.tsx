@@ -1,24 +1,24 @@
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { MdDownload, MdSettings } from 'react-icons/md';
 
 import { useCVStore } from '@/stores/CVStore';
-import { useOverlayComponentsStore } from '@/stores/OverlayComponentsStore';
+import { ROUTES } from '@/router/routes';
 
 import { CV } from '@/components/CV';
 import { Button } from '@/components/Button';
-import { CVDrawer } from '@/components/OverlayComponents/CVDrawer';
 
 import styles from './CVPreview.module.scss';
 
 
 export const CVPreview = () => {
-  const showComponent = useOverlayComponentsStore(state => state.showComponent);
   const { cv, preferences } = useCVStore();
+  const navigate = useNavigate();
 
   const { t } = useTranslation();
 
   const handleExportClick = async () => {
-    await showComponent(CVDrawer, { cv, preferences });
+    navigate(ROUTES.export.get());
   }
 
   return (

@@ -1,30 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import { MdArrowBack } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
-import type { OverlayComponentProps } from '@/stores/OverlayComponentsStore/types';
-import type { CVInfo, CVPreferences } from '@/stores/CVStore';
+import { useCVStore } from '@/stores/CVStore';
 
 import { CV } from '@/components/CV';
 import { Button } from '@/components/Button';
 import { Typography } from '@/components/Typography';
 
-import styles from './CVDrawer.module.scss';
+import styles from './CVExportPage.module.scss';
 
 
-type Props = OverlayComponentProps & {
-  cv: CVInfo;
-  preferences: CVPreferences;
-};
-
-export const CVDrawer = ({
-  cv, preferences, state, onClose
-}: Props) => {
+const CVExportPage = () => {
+  const { cv, preferences } = useCVStore();
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
-    <div
-      className={styles.drawer}
-      data-opened={state === 'opened'}
+    <main
+      className={styles.main}
     >
       <div
         className={styles.content}
@@ -35,7 +29,7 @@ export const CVDrawer = ({
               isIconOnly
               variant="tertiary"
               className={styles.backBtn}
-              onClick={onClose}
+              onClick={() => navigate(-1)}
             >
               <MdArrowBack />
             </Button>
@@ -67,6 +61,8 @@ export const CVDrawer = ({
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
+
+export default CVExportPage;

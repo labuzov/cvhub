@@ -3,4 +3,8 @@ export const ROUTES = {
     path: '/editor',
     get: () => `/editor`
   },
+  export: {
+    path: '/export',
+    get: () => `/export`
+  }
 }
