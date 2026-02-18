@@ -9,6 +9,9 @@ import { EditorTabs } from '../types';
 import { Basic } from './Basic/Basic';
 import { Summary } from './Summary/Summary';
 import { Skills } from './Skills/Skills';
+import { Experience } from './Experience/Experience';
+import { Education } from './Education/Education';
+import { Certifications } from './Certifications/Certifications';
 
 
 type Props = {
@@ -29,6 +32,9 @@ export const EditorForm = ({
       case EditorTabs.Basic: return <Basic />;
       case EditorTabs.Summary: return <Summary />;
       case EditorTabs.Skills: return <Skills />;
+      case EditorTabs.Experience: return <Experience />;
+      case EditorTabs.Education: return <Education />;
+      case EditorTabs.Certifications: return <Certifications />
       default: return null;
     }
   }, [selectedTab]);

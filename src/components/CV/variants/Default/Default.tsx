@@ -93,13 +93,57 @@ export const Default = ({ cv }: Props) => {
               <div key={exp.id} className={styles.experienceItem}>
                 <div className={styles.experienceTitle}>
                   <div className={styles.experienceDesignation}>{exp.designation}</div>
-                  <div className={styles.experiencePeriod}>{exp.startDate} - present</div>
+                  {(!!exp.startDate || !!exp.endDate) && (
+                    <div className={styles.experiencePeriod}>{exp.startDate} - {exp.isCurrent ? t('cv.isCurrent') : exp.endDate}</div>
+                  )}
                 </div>
                 <div className={styles.experienceOrganization}>{exp.organization}</div>
                 <div
                   className={styles.experienceDescription}
                   dangerouslySetInnerHTML={{ __html: exp.description }}
                 />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!!cv.education.length && (
+        <section className={styles.section}>
+          <div className={styles.sectionTitle}>
+            {t('cv.education')}
+          </div>
+          <div className={styles.education}>
+            {cv.education.map(edu => (
+              <div key={edu.id} className={styles.educationItem}>
+                <div className={styles.educationTitle}>
+                  <div className={styles.educationPlace}>{edu.place}</div>
+                  {(!!edu.startDate || !!edu.endDate) && (
+                    <div className={styles.educationPeriod}>{edu.startDate} - {edu.isCurrent ? t('cv.isCurrent') : edu.endDate}</div>
+                  )}
+                </div>
+                <div className={styles.educationProgram}>{edu.program}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!!cv.certifications.length && (
+        <section className={styles.section}>
+          <div className={styles.sectionTitle}>
+            {t('cv.certifications')}
+          </div>
+          <div className={styles.certifications}>
+            {cv.certifications.map(cert => (
+              <div key={cert.id} className={styles.certificationsItem}>
+                <div className={styles.certificationsTitle}>
+                  <div className={styles.certificationsName}>{cert.certName}</div>
+                  {!!cert.date && (
+                    <div className={styles.certificationsDate}>{cert.date}</div>
+                  )}
+                </div>
+                <div className={styles.certificationsOrganization}>{cert.certOrganization}</div>
               </div>
             ))}
           </div>

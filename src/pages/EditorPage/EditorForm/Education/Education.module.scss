@@ -1,0 +1,46 @@
+@use "/src/styles/shared" as shared;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.paper {
+  position: relative;
+}
+
+.form {
+  margin-top: var(--spacing-10);
+}
+
+.rows {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-6);
+
+  @include shared.bp-sm {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  width: 100%;
+}
+
+.checkbox {
+  margin: var(--spacing-8) 0;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+}
+
+.actions {
+  margin-top: var(--spacing-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -6,21 +6,41 @@ export type CVInfo = {
   location: string;
   phone: string;
   summary: string;
+  skills: CVSkill[];
+  experience: CVExperience[];
+  education: CVEducation[];
+  certifications: CVCertification[];
+}
 
-  skills: {
-    title: string;
-    proficiency?: number;
-  }[];
+export type CVSkill = {
+  title: string;
+  proficiency?: number;
+}
 
-  experience: {
-    id: string;
-    designation: string;
-    organization: string;
-    startDate: string;
-    endDate?: string;
-    isCurrent: boolean;
-    description: string;
-  }[];
+export type CVExperience = {
+  id: string;
+  designation: string;
+  organization: string;
+  startDate: string;
+  endDate: string;
+  isCurrent: boolean;
+  description: string;
+}
+
+export type CVEducation = {
+  id: string;
+  place: string;
+  program: string;
+  startDate: string;
+  endDate: string;
+  isCurrent: boolean;
+}
+
+export type CVCertification = {
+  id: string;
+  certName: string;
+  certOrganization: string;
+  date: string;
 }
 
 export type CVPreferences = {

@@ -1,14 +1,15 @@
 import { useTranslation } from 'react-i18next';
+import { MdAdd } from 'react-icons/md';
 
 import { Paper } from '@/components/Paper';
-
-import styles from './Skills.module.scss';
-import { useSkills } from './hooks/useSkills';
 import { FormField } from '@/components/FormField';
 import { Label } from '@/components/Label';
 import { Input } from '@/components/Input';
 import { Button } from '@/components/Button';
 import { Tags } from '@/components/Tags';
+
+import styles from './Skills.module.scss';
+import { useSkills } from './hooks/useSkills';
 
 
 export const Skills = () => {
@@ -37,6 +38,7 @@ export const Skills = () => {
             <Label>{t(`editor.field.skills`)}</Label>
             <Input
               value={title}
+              placeholder={t(`editor.field.skills.placeholder`)}
               onChange={e => setTitle(e.currentTarget.value)}
             />
           </FormField>
@@ -46,6 +48,7 @@ export const Skills = () => {
             className={styles.addBtn}
             onClick={() => addSkill(title)}
           >
+            <MdAdd />
             {t(`button.add`)}
           </Button>
         </div>
