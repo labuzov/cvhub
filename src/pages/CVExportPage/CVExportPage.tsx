@@ -9,12 +9,15 @@ import { Button } from '@/components/Button';
 import { Typography } from '@/components/Typography';
 
 import styles from './CVExportPage.module.scss';
+import { useCVPrint } from './hooks/useCVPrint';
 
 
 const CVExportPage = () => {
   const { cv, preferences } = useCVStore();
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const { handlePrint } = useCVPrint(cv.name);
 
   return (
     <main
@@ -34,7 +37,7 @@ const CVExportPage = () => {
               <MdArrowBack />
             </Button>
             <Button
-              onClick={window.print}
+              onClick={handlePrint}
             >
               {t('button.print')}
             </Button>
