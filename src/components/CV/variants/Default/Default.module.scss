@@ -75,9 +75,9 @@
 }
 
 .experience {
-  &:not(:last-child) {
-    margin-bottom: calc(var(--cv-spacing) * 8);
-  }
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--cv-spacing) * 8);
 
   &Title {
     display: flex;
@@ -91,6 +91,64 @@
   }
 
   &Period {
+    font-size: calc(var(--cv-font-size) * 0.9);
+    color: var(--cv-text-secondary);
+    margin-left: calc(var(--cv-spacing) * 4);
+  }
+
+  &Organization {
+    color: var(--cv-primary);
+    font-weight: 500;
+    margin-bottom: calc(var(--cv-spacing) * 2);
+  }
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--cv-spacing) * 8);
+
+  &Title {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--cv-spacing) * 1);
+  }
+
+  &Place {
+    font-size: calc(var(--cv-font-size) * 1.2);
+    font-weight: 700;
+  }
+
+  &Period {
+    font-size: calc(var(--cv-font-size) * 0.9);
+    color: var(--cv-text-secondary);
+    margin-left: calc(var(--cv-spacing) * 4);
+  }
+
+  &Program {
+    color: var(--cv-primary);
+    font-weight: 500;
+    margin-bottom: calc(var(--cv-spacing) * 2);
+  }
+}
+
+.certifications {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--cv-spacing) * 8);
+
+  &Title {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--cv-spacing) * 1);
+  }
+
+  &Name {
+    font-size: calc(var(--cv-font-size) * 1.2);
+    font-weight: 700;
+  }
+
+  &Date {
     font-size: calc(var(--cv-font-size) * 0.9);
     color: var(--cv-text-secondary);
     margin-left: calc(var(--cv-spacing) * 4);

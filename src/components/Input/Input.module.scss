@@ -32,13 +32,8 @@
   }
 
   &:disabled {
-    background-color: var(--input-bg-disabled);
-    border-color: var(--input-border-disabled);
     opacity: .5;
-
-    &:hover {
-      border-color: var(--input-border-disabled);
-    }
+    pointer-events: none;
   }
 
   &::placeholder {

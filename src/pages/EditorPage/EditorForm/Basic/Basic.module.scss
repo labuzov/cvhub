@@ -1,0 +1,11 @@
+@use "/src/styles/shared" as shared;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-6);
+
+  @include shared.bp-sm {
+    grid-template-columns: 1fr;
+  }
+}

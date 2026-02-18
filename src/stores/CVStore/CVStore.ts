@@ -19,16 +19,9 @@ export const useCVStore = create<State>(set => ({
     phone: '',
     summary: '',
     skills: [],
-    experience: [
-      {
-        id: '1',
-        designation: 'Senior Frontend Developer',
-        organization: 'Super Solutions',
-        description: 'some description',
-        startDate: '01.11.2021',
-        isCurrent: true
-      }
-    ],
+    experience: [],
+    education: [],
+    certifications: [],
   },
 
   preferences: {

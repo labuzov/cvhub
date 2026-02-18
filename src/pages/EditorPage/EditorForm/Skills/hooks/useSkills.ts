@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useCVStore, type CVInfo } from '@/stores/CVStore';
+import { useCVStore, type CVSkill } from '@/stores/CVStore';
 
 
 export const useSkills = () => {
@@ -16,7 +16,7 @@ export const useSkills = () => {
     const exists = skills.some(s => s.title.toLowerCase() === trimmed.toLowerCase());
     if (exists) return;
     
-    const newSkills: CVInfo["skills"] = [ ...skills, { title: trimmed } ];
+    const newSkills: CVSkill[] = [ ...skills, { title: trimmed } ];
     updateCVField('skills', newSkills);
 
     setTitle('');

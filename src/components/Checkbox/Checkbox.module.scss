@@ -1,0 +1,68 @@
+.checkbox {
+  display: flex;
+  /* This is needed so the HiddenInput is positioned correctly */
+  position: relative;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text);
+  forced-color-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+
+  .indicator {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+    box-sizing: border-box;
+    border-radius: var(--radius-sm);
+    transition: all 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: var(--checkbox-bg);
+    border: 1px solid var(--checkbox-border);
+  }
+
+  svg {
+    width: calc(100% - var(--spacing-2));
+    height: calc(100% - var(--spacing-2));
+    fill: none;
+    stroke: var(--checkbox);
+    stroke-width: 3px;
+    stroke-dasharray: 22px;
+    stroke-dashoffset: 66;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: all 200ms;
+  }
+
+  &[data-pressed] {
+    .indicator {
+      scale: 0.9;
+    }
+  }
+
+  &[data-selected],
+  &[data-indeterminate] {
+    .indicator {
+      background-color: var(--checkbox-bg-selected);
+      border-color: var(--checkbox-border-selected);
+    }
+
+    svg {
+      stroke-dashoffset: 44;
+    }
+  }
+
+  &[data-indeterminate] {
+    svg {
+      stroke: none;
+      fill: var(--checkbox);
+    }
+  }
+
+  &[data-disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
