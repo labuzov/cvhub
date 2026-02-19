@@ -65,11 +65,19 @@
   "cv.tips.tip2": "2. Set these fields: Destination -> 'Save as PDF', Layout -> 'Portrait'",
   "cv.tips.tip3": "3. Uncheck 'Headers and footers'",
 
+  "cv.preferences.colors": "Colors",
+  "cv.preferences.colorPrimary": "Primary",
+  "cv.preferences.colorPrimaryLight": "Primary Light",
+  "cv.preferences.colorText": "Text",
+  "cv.preferences.colorTextSecondary": "Text Secondary",
+  "cv.preferences.colorBackground": "Background",
+
   "button.prevStep": "Previous Step",
   "button.nextStep": "Next Step",
   "button.add": "Add",
   "button.addNew": "Add New",
   "button.preferences": "Preferences",
   "button.goToExport": "Go To Export",
-  "button.print": "Print and Save"
+  "button.print": "Print and Save",
+  "button.reset": "Reset"
 }

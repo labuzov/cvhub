@@ -1,3 +1,5 @@
+@use "/src/styles/shared" as shared;
+
 .panel {
   background-color: var(--bg);
   width: fit-content;
@@ -7,17 +9,29 @@
 
 .wrapper {
   padding: var(--spacing-6) var(--spacing-4);
+
+  @include shared.bp-md {
+    padding: var(--spacing-4) var(--spacing-2);
+  }
 }
 
 .tab {
   display: flex;
   align-items: center;
+  gap: var(--spacing-2);
   width: 200px;
   padding: var(--spacing-3) var(--spacing-4);
 
   svg {
     width: 1.5rem;
     height: 1.5rem;
-    margin-right: var(--spacing-2);
+  }
+
+  @include shared.bp-lg {
+    width: fit-content;
+
+    &Text {
+      display: none;
+    }
   }
 }

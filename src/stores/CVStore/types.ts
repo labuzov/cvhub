@@ -43,11 +43,35 @@ export type CVCertification = {
   date: string;
 }
 
+export const enum CVPreferenceValue {
+  FontSize = 'fontSize',
+  Spacing = 'spacing',
+  ColorText = 'colorText',
+  ColorTextSecondary = 'colorTextSecondary',
+  ColorPrimary = 'colorPrimary',
+  ColorPrimaryLight = 'colorPrimaryLight',
+  ColorBackground = 'colorBackground',
+}
+
 export type CVPreferences = {
-  fontSize: number;
-  spacing: number;
-  colorText: string;
-  colorTextSecondary: string;
-  colorPrimary: string;
-  colorPrimaryLight: string;
+  [CVPreferenceValue.FontSize]: number;
+  [CVPreferenceValue.Spacing]: number;
+  [CVPreferenceValue.ColorText]: string;
+  [CVPreferenceValue.ColorTextSecondary]: string;
+  [CVPreferenceValue.ColorPrimary]: string;
+  [CVPreferenceValue.ColorPrimaryLight]: string;
+  [CVPreferenceValue.ColorBackground]: string;
+}
+
+export const cvPreferencesColors = [
+  CVPreferenceValue.ColorPrimary,
+  CVPreferenceValue.ColorPrimaryLight,
+  CVPreferenceValue.ColorText,
+  CVPreferenceValue.ColorTextSecondary,
+  CVPreferenceValue.ColorBackground,
+];
+
+export type CVTemplate = {
+  name: string;
+  defaultPreferences: CVPreferences;
 }

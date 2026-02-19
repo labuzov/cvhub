@@ -8,10 +8,11 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2';
   weight?: 'normal' | 'bolder' | 'bold';
   color?: 'primary' | 'secondary';
+  ellipsis?: boolean;
 }
 
 export const Typography = ({
-  className, variant = 'body1', weight, color = 'primary', children, ...props
+  className, variant = 'body1', weight, color = 'primary', ellipsis, children, ...props
 }: Props) => {
 
   return (
@@ -21,6 +22,7 @@ export const Typography = ({
         weight && styles[weight],
         styles[variant],
         styles[color],
+        ellipsis && styles.ellipsis,
         className
       )}
       {...props}
