@@ -6,6 +6,7 @@ import { ColorSwatch } from '../ColorSwatch';
 import { ColorArea } from '../ColorArea';
 import { ColorSlider } from '../ColorSlider';
 import { useColorPicker } from './hooks/useColorPicker';
+import { ColorField } from '../ColorField';
 
 
 type Props = Omit<ColorPickerProps, 'children' | 'defaultValue'>;
@@ -34,6 +35,7 @@ export const ColorPicker = ({ value, onChange, ...props }: Props) => {
             colorSpace="hsb"
             channel="hue"
           />
+          <ColorField />
         </Popover>
       </PopoverWrapper>
     </AriaColorPicker>

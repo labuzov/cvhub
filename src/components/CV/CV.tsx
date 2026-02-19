@@ -22,7 +22,7 @@ export const CV = ({ cv, template, preferences }: Props) => {
   }, [cv, template.name]);
 
   const {
-    fontSize, spacing, colorPrimary, colorPrimaryLight, colorText, colorTextSecondary
+    fontSize, spacing, colorPrimary, colorPrimaryLight, colorText, colorTextSecondary, colorBackground
   } = preferences;
 
   return (
@@ -35,6 +35,7 @@ export const CV = ({ cv, template, preferences }: Props) => {
         '--cv-primary-light': colorPrimaryLight,
         '--cv-text': colorText,
         '--cv-text-secondary': colorTextSecondary,
+        '--cv-bg': colorBackground,
       } as React.CSSProperties}
     >
       {renderVariant()}

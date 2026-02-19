@@ -10,6 +10,7 @@ export const cvTemplates: CVTemplate[] = [
       colorPrimaryLight: '#e6f2fc',
       colorText: '#333333',
       colorTextSecondary: '#9e9e9e',
+      colorBackground: '#ffffff',
     }
   }
 ];

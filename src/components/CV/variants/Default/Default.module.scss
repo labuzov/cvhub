@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #fff;
+  background-color: var(--cv-bg);
   padding: calc(var(--cv-spacing) * 10);
   color: var(--cv-text);
   font-size: var(--cv-font-size);

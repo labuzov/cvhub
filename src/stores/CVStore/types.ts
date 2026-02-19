@@ -50,6 +50,7 @@ export const enum CVPreferenceValue {
   ColorTextSecondary = 'colorTextSecondary',
   ColorPrimary = 'colorPrimary',
   ColorPrimaryLight = 'colorPrimaryLight',
+  ColorBackground = 'colorBackground',
 }
 
 export type CVPreferences = {
@@ -59,6 +60,7 @@ export type CVPreferences = {
   [CVPreferenceValue.ColorTextSecondary]: string;
   [CVPreferenceValue.ColorPrimary]: string;
   [CVPreferenceValue.ColorPrimaryLight]: string;
+  [CVPreferenceValue.ColorBackground]: string;
 }
 
 export const cvPreferencesColors = [
@@ -66,6 +68,7 @@ export const cvPreferencesColors = [
   CVPreferenceValue.ColorPrimaryLight,
   CVPreferenceValue.ColorText,
   CVPreferenceValue.ColorTextSecondary,
+  CVPreferenceValue.ColorBackground,
 ];
 
 export type CVTemplate = {

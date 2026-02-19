@@ -70,6 +70,7 @@
   "cv.preferences.colorPrimaryLight": "Primary Light",
   "cv.preferences.colorText": "Text",
   "cv.preferences.colorTextSecondary": "Text Secondary",
+  "cv.preferences.colorBackground": "Background",
 
   "button.prevStep": "Previous Step",
   "button.nextStep": "Next Step",
