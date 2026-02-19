@@ -1,0 +1,38 @@
+.preferences {
+  width: 250px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+
+.section {
+  &Title {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-2);
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -13,7 +13,7 @@ import { useCVPrint } from './hooks/useCVPrint';
 
 
 const CVExportPage = () => {
-  const { cv, preferences } = useCVStore();
+  const { cv, preferences, template } = useCVStore();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -59,7 +59,7 @@ const CVExportPage = () => {
         <div className={styles.cv}>
           <CV
             cv={cv}
-            variant="default"
+            template={template}
             preferences={preferences}
           />
         </div>

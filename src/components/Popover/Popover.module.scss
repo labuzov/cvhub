@@ -1,0 +1,35 @@
+.popover {
+  box-sizing: border-box;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  transition: transform 200ms, opacity 200ms;
+  padding: var(--spacing-4);
+
+  &[data-trigger=MenuTrigger],
+  &[data-trigger=SubmenuTrigger] {
+    padding: 0;
+  }
+
+  &[data-entering],
+  &[data-exiting] {
+    transform: var(--popover-origin);
+    opacity: 0;
+  }
+
+  &[data-placement=top] {
+    --popover-origin: translateY(8px);
+  }
+
+  &[data-placement=bottom] {
+    --popover-origin: translateY(-8px);
+  }
+
+  &[data-placement=right] {
+    --popover-origin: translateX(-8px);
+  }
+
+  &[data-placement=left] {
+    --popover-origin: translateX(8px);
+  }
+}
